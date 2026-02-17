@@ -1,0 +1,58 @@
+# .project metadata for Dalec
+# Documentation: https://github.com/cncf/automation/tree/main/utilities/dot-project
+
+schema_version: "1.0.0"
+slug: "dalec"
+name: "Dalec"
+description: "Dalec provides a declarative format for building system packages and containers from those packages in a secure way for supply chain security."
+type: "project"
+project_lead: "@project-dalec/dalec-maintainers"
+cncf_slack_channel: "#dalec"
+
+maturity_log:
+  - phase: "sandbox"
+    date: "2025-10-08T00:00:00Z"
+    issue: "https://github.com/cncf/sandbox/issues/396"
+
+repositories:
+  - "https://github.com/project-dalec/dalec"
+  - "https://github.com/project-dalec/dalec-vscode-extension"
+  - "https://github.com/project-dalec/dalec-docker-desktop-extension"
+
+website: "https://project-dalec.github.io/dalec/"
+artwork: "https://github.com/cncf/artwork/tree/master/projects/dalec"
+
+package_managers:
+  docker: "ghcr.io/project-dalec/dalec"
+
+social:
+  slack: "https://cloud-native.slack.com/archives/dalec"
+
+security:
+  policy:
+    path: "https://github.com/project-dalec/dalec/blob/main/SECURITY.md"
+  contact: 
+    advisory_url: "https://github.com/project-dalec/dalec/security/advisories/new"
+
+governance:
+  contributing:
+    path: "https://github.com/project-dalec/dalec/blob/main/CONTRIBUTING.md"
+  code_of_conduct:
+    path: "https://github.com/project-dalec/dalec/blob/main/CODE_OF_CONDUCT.md"
+
+legal:
+  license:
+    path: "LICENSE"
+  identity_type:
+    has_dco: true
+    has_cla: false
+    dco_url:
+      path: "https://developercertificate.org/"
+
+documentation:
+  readme:
+    path: "README.md"
+
+landscape:
+  category: "App Definition and Development"
+  subcategory: "Application Definition & Image Build"
