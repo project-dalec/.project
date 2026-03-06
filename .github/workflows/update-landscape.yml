@@ -1,6 +1,7 @@
 name: Update Landscape
 on:
   push:
+    branches: [main]
     paths:
       - 'project.yaml'
   workflow_dispatch:
@@ -13,12 +14,12 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
         with:
           fetch-depth: 0
 
       - name: Update Landscape
-        uses: cncf/automation/.github/actions/landscape-update@9200f947dd422a13b58c648baa71389181b37406
+        uses: cncf/automation/.github/actions/landscape-update@979abb1e07fa1b6f2b4e77200f6a698cdd86e59c
         with:
           project_file: 'project.yaml'
           token: ${{ secrets.LANDSCAPE_REPO_TOKEN }}

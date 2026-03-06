@@ -15,22 +15,22 @@ jobs:
   validate-project:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
         with:
           fetch-depth: 0
 
-      - uses: cncf/automation/.github/actions/validate-project@2ba23a381e5e97099a71bde8c0cda3968fcb8d59
+      - uses: cncf/automation/.github/actions/validate-project@979abb1e07fa1b6f2b4e77200f6a698cdd86e59c
         with:
           project_file: 'project.yaml'
 
   validate-maintainers:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
         with:
           fetch-depth: 0
 
-      - uses: cncf/automation/.github/actions/validate-maintainers@9200f947dd422a13b58c648baa71389181b37406
+      - uses: cncf/automation/.github/actions/validate-maintainers@979abb1e07fa1b6f2b4e77200f6a698cdd86e59c
         with:
           maintainers_file: 'maintainers.yaml'
           verify_maintainers: 'true'

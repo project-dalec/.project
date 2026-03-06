@@ -38,11 +38,11 @@ governance:
   contributing:
     path: "https://github.com/project-dalec/dalec/blob/main/CONTRIBUTING.md"
   code_of_conduct:
-    path: "https://github.com/project-dalec/dalec/blob/main/CODE_OF_CONDUCT.md"
+    path: "https://github.com/cncf/foundation/blob/main/code-of-conduct.md"
 
 legal:
   license:
-    path: "LICENSE"
+    path: "https://github.com/project-dalec/.project/blob/main/LICENSE"
   identity_type:
     has_dco: true
     has_cla: false
@@ -51,7 +51,7 @@ legal:
 
 documentation:
   readme:
-    path: "README.md"
+    path: "https://github.com/project-dalec/.project/blob/main/README.md"
 
 landscape:
   category: "App Definition and Development"
