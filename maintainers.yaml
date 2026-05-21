@@ -8,6 +8,5 @@ maintainers:
       - name: "project-maintainers"
         members:
           - cpuguy83
+          - jrrickard
           - pmengelbert
-          - sozercan
-          - adamperlin
