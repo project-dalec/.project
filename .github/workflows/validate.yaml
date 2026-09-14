@@ -10,29 +10,35 @@ on:
     paths:
       - 'project.yaml'
       - 'maintainers.yaml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate-project:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
 
-      - uses: cncf/automation/.github/actions/validate-project@8bb4edabb6fe2297dde69d84f13e23605664f4e5
+      - uses: cncf/automation/.github/actions/validate-project@b7b448243bd2bb07abfe89daca513d07d7645a98
         with:
           project_file: 'project.yaml'
 
   validate-maintainers:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - uses: cncf/automation/.github/actions/validate-maintainers@8bb4edabb6fe2297dde69d84f13e23605664f4e5
+      - uses: cncf/automation/.github/actions/validate-maintainers@b7b448243bd2bb07abfe89daca513d07d7645a98
         with:
           maintainers_file: 'maintainers.yaml'
-          verify_maintainers: 'true'
+          # Disabled until the LFX LLT issue is resolved. Validation is done manually for now.
+          verify_maintainers: 'false'
         env:
           LFX_AUTH_TOKEN: ${{ secrets.LFX_AUTH_TOKEN }}
